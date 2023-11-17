@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true"
+ name="C:/Users/Friday/IdeaProjects/TestNG_Appium/src/test/java/objectsitbusinessbook/DataProviderMethod_Implemented.java"><classes><class name="objectsitbusinessbook.DataProviderMethod_Implemented"><methods><include name="dataProviderApache1"/></methods></class></classes></test></suite>

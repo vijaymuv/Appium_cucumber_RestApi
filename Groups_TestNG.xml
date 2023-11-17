@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="softwaretestingmaterial">
+    <test name="testngTest">
+        <parameter name="num1" value="10"></parameter>
+        <parameter name="num2" value="20"></parameter>
+        <parameter name="msg 2" value="hii"></parameter>
+<!--        <groups>-->
+<!--&lt;!&ndash;            <run>&ndash;&gt;-->
+<!--&lt;!&ndash;                <include name="practise"></include>&ndash;&gt;-->
+<!--&lt;!&ndash;            </run>&ndash;&gt;-->
+<!--            <define name="All test">-->
+<!--                <include name="practise"></include>-->
+<!--                <include name="test"></include>-->
+<!--            </define>-->
+<!--            <run>-->
+<!--                <include name="All test"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <classes>
+            <class name="Utilities.TestNG_practise" />
+        </classes>
+    </test>
+</suite>

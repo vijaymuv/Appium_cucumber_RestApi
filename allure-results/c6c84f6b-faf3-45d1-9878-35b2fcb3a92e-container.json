@@ -1,0 +1,1 @@
+{"uuid":"c6c84f6b-faf3-45d1-9878-35b2fcb3a92e","name":"Api_Cucumber_Appium","children":["bd985875-952a-4ba3-b2c6-693676c06f07"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1700221494183,"stop":1700221494848}],"afters":[],"start":1700221494109,"stop":1700221502636}

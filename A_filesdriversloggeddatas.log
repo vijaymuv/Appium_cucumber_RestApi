@@ -1,0 +1,81 @@
+2023-04-26 19:56:19 INFO  LoggerExamples:9 - information
+2023-04-26 19:56:19 WARN  LoggerExamples:10 - warning
+2023-04-26 19:56:19 ERROR LoggerExamples:11 - error
+2023-04-26 19:56:19 FATAL LoggerExamples:12 - fatal messed
+2023-04-26 21:17:49 INFO  LoggerExamples:9 - information
+2023-04-26 21:17:49 WARN  LoggerExamples:10 - warning
+2023-04-26 21:17:49 ERROR LoggerExamples:11 - error
+2023-04-26 21:17:49 FATAL LoggerExamples:12 - fatal messed
+2023-04-26 21:19:44 INFO  ParallelDemoSteps:27 - it business book url launched
+2023-04-26 21:19:44 INFO  ParallelDemoSteps:33 - user enters email and password
+2023-04-26 21:19:47 INFO  ParallelDemoSteps:39 - user sucessfully gets home page
+2023-04-26 21:19:56 INFO  ParallelDemoSteps:51 - user sucessfully logout from page
+2023-04-26 21:25:58 INFO  ParallelDemoSteps:27 - it business book url launched
+2023-04-26 21:25:59 INFO  ParallelDemoSteps:33 - user enters email and password
+2023-04-26 21:26:01 INFO  ParallelDemoSteps:39 - user sucessfully gets home page
+2023-04-26 21:26:15 INFO  ParallelDemoSteps:53 - user sucessfully logout from page
+2023-04-26 21:37:04 INFO  ParallelDemoSteps:27 - it business book url launched
+2023-04-26 21:37:05 INFO  ParallelDemoSteps:33 - user enters email and password
+2023-04-26 21:37:07 INFO  ParallelDemoSteps:39 - user sucessfully gets home page
+2023-04-26 21:37:15 INFO  ParallelDemoSteps:53 - user sucessfully logout from page
+2023-04-28 15:01:57 INFO  ParallelDemoSteps:23 - it business book url launched
+2023-04-28 15:04:05 INFO  ParallelDemoSteps:24 - it business book url launched
+2023-04-28 15:05:58 INFO  ParallelDemoSteps:24 - it business book url launched
+2023-04-28 15:07:27 INFO  ParallelDemoSteps:25 - it business book url launched
+2023-04-28 15:13:21 INFO  login$ParallelDemoSteps:20 - it business book url launched
+2023-04-28 15:13:22 INFO  login$ParallelDemoSteps:26 - user enters email and password
+2023-04-28 15:13:24 INFO  login$ParallelDemoSteps:32 - user sucessfully gets home page
+2023-04-28 15:22:20 INFO  login$ParallelDemoSteps:28 - it business book url launched
+2023-04-28 15:24:20 INFO  login$ParallelDemoSteps:30 - it business book url launched
+2023-04-28 15:24:21 INFO  login$ParallelDemoSteps:36 - user enters email and password
+2023-04-28 15:24:23 INFO  login$ParallelDemoSteps:42 - user sucessfully gets home page
+2023-04-28 15:24:28 INFO  login$ParallelDemoSteps:56 - user sucessfully logout from page
+2023-04-28 16:10:02 INFO  ParallelDemo:24 - it business book url launched
+2023-04-28 16:10:02 INFO  ParallelDemo:30 - user enters email and password
+2023-04-28 16:10:04 INFO  ParallelDemo:36 - user sucessfully gets home page
+2023-04-28 16:10:29 INFO  ParallelDemo:24 - it business book url launched
+2023-04-28 16:10:29 INFO  ParallelDemo:30 - user enters email and password
+2023-04-28 16:10:31 INFO  ParallelDemo:36 - user sucessfully gets home page
+2023-04-28 16:11:00 INFO  ParallelDemo:24 - it business book url launched
+2023-04-28 16:11:00 INFO  ParallelDemo:30 - user enters email and password
+2023-04-28 16:11:02 INFO  ParallelDemo:36 - user sucessfully gets home page
+2023-04-28 16:56:09 INFO  ParallelDemo:24 - it business book url launched
+2023-04-28 16:58:13 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 16:59:30 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:00:20 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:00:20 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:00:23 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:00:31 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:19:20 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:19:20 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:19:22 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:19:30 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:23:46 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:23:47 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:23:49 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:23:56 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:26:26 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:26:27 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:26:29 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:26:36 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:28:22 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:28:22 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:28:24 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:28:31 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:31:29 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:31:29 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:31:31 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:31:39 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:51:16 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:51:17 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:51:19 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:51:26 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-04-28 17:53:40 INFO  ParallelDemo:22 - it business book url launched
+2023-04-28 17:53:40 INFO  ParallelDemo:29 - user enters email and password
+2023-04-28 17:53:43 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-04-28 17:53:49 INFO  ParallelDemo:49 - user sucessfully logout from page
+2023-05-03 15:21:01 INFO  ParallelDemo:22 - it business book url launched
+2023-05-03 18:50:55 INFO  ParallelDemo:22 - it business book url launched
+2023-05-03 18:50:55 INFO  ParallelDemo:29 - user enters email and password
+2023-05-03 18:50:57 INFO  ParallelDemo:35 - user sucessfully gets home page
+2023-05-03 18:51:04 INFO  ParallelDemo:49 - user sucessfully logout from page
