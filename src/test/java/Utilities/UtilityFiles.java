@@ -29,38 +29,8 @@ public class UtilityFiles {
 	public static String value;
 
 
-	public static void calendarPicker(String year, String month, String day) {
-
-
-		if(Integer.parseInt(day)>32) {
-			System.out.println("inalid day format: "+day +" "+month +" "+year);
-			return;
-		}
-		if (month.equals("Feburuary") && Integer.parseInt(day)>29) {
-			System.out.println(" feburuary date must not greater than 29"+day +" "+month +" "+year);
-		}
-		String myear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
-		System.out.println(myear);
-		String month1 = myear.split(" ")[0];
-		String year1 = myear.split(" ")[1];
-		String day1 = "26";
-
-		while (!(month1.equals(month) && (year1.equals(year)))) {
-
-			driver.findElement(By.xpath("//a[@class='ui-datepicker-prev ui-corner-all']")).click();
-			myear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
-			month1 = myear.split(" ")[0];
-			year1 = myear.split(" ")[1];
-
-		}
-		driver.findElement(By.xpath("/html/body/div[4]/table/tbody/tr/td/a[text()="+day1+"]")).click();
-
-
-	}
-
-	public static WebDriver browserLaunch(String name) {
-		if (name.equalsIgnoreCase("chrome")) {
-			//System.setProperty("webdriver.chrome.driver", "C:\\A_files\\drivers\\chromedriver.exe");
+	public static WebDriver browserLaunch(String browser) {
+		if (browser.equalsIgnoreCase(browser)) {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			options.addArguments("--disable-notifications");
@@ -68,8 +38,7 @@ public class UtilityFiles {
 			driver = new ChromeDriver(options);
 
 
-		} else if (name.equalsIgnoreCase("edge")) {
-			//System.setProperty("webdriver.edge.driver","C:\\A_files\\drivers\\msedgedriver.exe");
+		} else if (browser.equalsIgnoreCase(browser)) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 
@@ -84,19 +53,32 @@ public class UtilityFiles {
 		driver.get(url);
 	}
 
-	public static String getTitleElement() {
-		String title = driver.getTitle();
-		return title;
+	public static String getTitle_Url() {
+		String url_Tilte = driver.getTitle();
+		return url_Tilte;
 	}
-
+	
+	public static Properties readPropertiesFile(String locatoin) throws IOException {
+	    
+	      FileInputStream  fis = new FileInputStream(locatoin);
+	      Properties properties = new Properties();
+	      properties.load(fis);
+	      
+		return properties;
+		}
+	
+	public static void wait_untill_element(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
 	public static String getPagSsourceElement(String url) {
 		String pageSource = driver.getPageSource();
 		return pageSource;
 	}
 
-	public static String CurrentUrlElement(String url) {
-		String url1 = driver.getCurrentUrl();
-		return url1;
+	public static String CurrentUrlElement() {
+		String current_url = driver.getCurrentUrl();
+		return current_url;
 	}
 
 	public static void closePage() {
@@ -107,7 +89,7 @@ public class UtilityFiles {
 		driver.quit();
 	}
 
-	public static void navigateto(String url) {
+	public static void navigateTo(String url) {
 		driver.navigate().to(url);
 	}
 
@@ -123,130 +105,132 @@ public class UtilityFiles {
 		driver.navigate().refresh();
 	}
 
-	public static void maximize_page() {
+	public static void maximize_Page() {
 		driver.manage().window().maximize();
 	}
 
-	public static void full_screen() {
+	public static void full_Screen() {
 		driver.manage().window().fullscreen();
 	}
 
-	public static void get_size() {
+	public static void get_Size() {
 		driver.manage().window().getSize();
 	}
 
-	public static void delete_all_cookies() {
+	public static void delete_All_Cookies() {
 		driver.manage().deleteAllCookies();
 	}
 
 	public static void set_size(int width, int height) {
-		Dimension d = new Dimension(width, height);
-		driver.manage().window().setSize(d);
+		Dimension dimension = new Dimension(width, height);
+		driver.manage().window().setSize(dimension);
 	}
 
 	public static void clears(WebElement element) {
 		element.clear();
 	}
 
-	public static void sendKeysElement(WebElement a,String b) {
-		a.sendKeys(b);
+	public static void sendKeysElement(WebElement element,String value) {
+		element.sendKeys(value);
 	}
 
-	public static void clickBtn(WebElement ele) {
-		ele.click();
+	public static void clickBtn(WebElement element) {
+		element.click();
 	}
 
-	public static String get_Attribute(WebElement e) {
-		String attribute = e.getAttribute("value");
-		return attribute;
+	public static String get_Attribute(WebElement element,String value) {
+		String attributeValue = element.getAttribute(value);
+		return attributeValue;
 	}
 
-	public static String get_tagname(WebElement e) {
-		String tagName = e.getTagName();
+	public static String get_tagname(WebElement element) {
+		String tagName = element.getTagName();
 		return tagName;
 	}
 
-	public static Point get_location(WebElement e) {
-		Point location = e.getLocation();
+	public static Point get_location(WebElement element) {
+		Point location = element.getLocation();
 		return location;
 	}
 
-	public static String get_cssvalue(WebElement e, String a) {
-		String tagName = e.getCssValue(a);
+	public static String get_cssvalue(WebElement element, String value) {
+		String tagName = element.getCssValue(value);
 		return tagName;
 	}
 
-	public static Rectangle get_rectange(WebElement e) {
-		Rectangle rect = e.getRect();
-		return rect;
+	public static Rectangle get_rectange(WebElement element) {
+		Rectangle rectangle = element.getRect();
+		return rectangle;
 	}
 
-	public static void selectVisibleText(WebElement a, String A) {
-		Select s = new Select(a);
-		s.selectByVisibleText(A);
+	public static void selectVisibleText(WebElement element, String value) {
+		Select select = new Select(element);
+		select.selectByVisibleText(value);
 	}
 
-	public static void select_dropdown(WebElement a, String b, String data) {
-		Select s = new Select(a);
-		if (b.equalsIgnoreCase("text")) {
-			s.selectByVisibleText(data);
-		} else if (b.equalsIgnoreCase("value")) {
-			s.selectByValue(data);
-		} else if (b.equalsIgnoreCase("index")) {
-			int parse = Integer.parseInt(data);
-			s.selectByIndex(parse);
+	public static Select select_dropdown(WebElement element, String selectType, String value) {
+		Select select = new Select(element);
+		if (selectType.equalsIgnoreCase("visibletext")) {
+			select.selectByVisibleText(value);
+		} else if (selectType.equalsIgnoreCase("value")) {
+			select.selectByValue(value);
+		} else if (selectType.equalsIgnoreCase("index")) {
+			int parse = Integer.parseInt(value);
+			select.selectByIndex(parse);
 		}
+		return select;
 	}
 
-	public static void deselect_dropdown(WebElement a, String b, String data) {
-		Select s = new Select(a);
-		if (b.equalsIgnoreCase("text")) {
-			s.deselectByVisibleText(data);
-		} else if (b.equalsIgnoreCase("value")) {
-			s.deselectByValue(data);
-		} else if (b.equalsIgnoreCase("index")) {
+	public static Select deselect_dropdown(WebElement element, String selectType, String data) {
+		Select select = new Select(element);
+		if (selectType.equalsIgnoreCase("visibletext")) {
+			select.deselectByVisibleText(data);
+		} else if (selectType.equalsIgnoreCase("value")) {
+			select.deselectByValue(data);
+		} else if (selectType.equalsIgnoreCase("index")) {
 			int parse = Integer.parseInt(data);
-			s.deselectByIndex(parse);
+			select.deselectByIndex(parse);
 		}
+		return select;
 	}
 
-	public static void deselect_all(WebElement a) {
-		Select s = new Select(a);
-		s.deselectAll();
+	public static void deselect_all(WebElement element) {
+		Select select = new Select(element);
+		select.deselectAll();
 
 	}
 
-	public static void get_all_options(WebElement a) {
-		Select s = new Select(a);
-		List<WebElement> allSelectedOptions = s.getAllSelectedOptions();
+	public static void get_all_options(WebElement element) {
+		Select select = new Select(element);
+		List<WebElement> allSelectedOptions = select.getAllSelectedOptions();
 		for (WebElement allSelected : allSelectedOptions) {
 			System.out.println(allSelected.getText());
 		}
 
 	}
 
-	public static void get_options(WebElement a) {
-		Select s = new Select(a);
-		List<WebElement> allOptions = s.getOptions();
+	public static void get_options(WebElement element) {
+		Select select = new Select(element);
+		List<WebElement> allOptions = select.getOptions();
 		for (WebElement all : allOptions) {
 			System.out.println(all.getText());
 		}
 
 	}
 
-	public static void get_firstSelected_Options(WebElement a) {
-		Select s = new Select(a);
-		WebElement firstSelectedOption = s.getFirstSelectedOption();
+	public static void get_firstSelected_Options(WebElement element) {
+		Select select = new Select(element);
+		WebElement firstSelectedOption = select.getFirstSelectedOption();
 		System.out.println(firstSelectedOption.getText());
 	}
 
-	public static void moveToElement(WebElement e) {
-		Actions a = new Actions(driver);
-		a.moveToElement(e).build().perform();
+	public static void moveToElement(WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).build().perform();
 	}
 
-	public static void frames(String text, int  a) {
-		driver.switchTo().frame(a);
+	public static void frames(int  index) {
+		driver.switchTo().frame(index);
 
 	}
 
@@ -255,10 +239,10 @@ public class UtilityFiles {
 
 	}
 
-	public static  WebDriver Actions_class(WebElement e) {
+	public static  WebDriver Actions_class(WebElement element) {
 
-		Actions a = new Actions(driver);
-		a.contextClick(e).perform();
+		Actions action = new Actions(driver);
+		action.contextClick(element).perform();
 		return driver;
 	}
 
@@ -271,11 +255,11 @@ public class UtilityFiles {
 
 	}
 
-	public static void takeScreenshotElement() throws IOException {
+	public static void takeScreenshotElement(String location) throws IOException {
 
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("C:\\Users\\Friday\\IdeaProjects\\ProjectsPractise\\FailedTestCasesImg\\images.png");
+		File dest = new File(location);
 		FileUtils.copyFile(source,dest);
 	}
 
